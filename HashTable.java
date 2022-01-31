@@ -8,7 +8,7 @@
 
 import java.util.LinkedList;
 import java.util.Vector;
-public class HashhTable{
+public class HashTable{
       private Vector<LinkedList<Integer>> hashtable ;
       private int vecsize;
       public HashhTable(){
@@ -30,7 +30,7 @@ public class HashhTable{
           return value % hashtable.size();
       }
 
-      public HashhTable insertHashTable(int value){
+      public HashTable insertHashTable(int value){
           if(!exists(value)){
             int index = hashFunction(value);
             hashtable.get(index).add(value);
@@ -39,7 +39,7 @@ public class HashhTable{
           return this;
      }
 
-    public HashhTable deletion(int value){
+    public HashTable deletion(int value){
         if(exists(value))
         {
 
